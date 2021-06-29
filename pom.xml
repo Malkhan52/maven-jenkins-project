@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.sapient</groupId>
-	<artifactId>another-maven-project</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+  <groupId>com.sapient</groupId>
+  <artifactId>another-maven-project</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
 
-	<name>another-maven-project</name>
-	<description>A simple another-maven-project.</description>
-	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
+  <name>Maven</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://maven.apache.org/</url>
+  <inceptionYear>2001</inceptionYear>
 
-	<properties>
+  <distributionManagement>
+    <site>
+      <id>website</id>
+      <url>scp://webhost.company.com/www/website</url>
+    </site>
+  </distributionManagement>
+
+  <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -48,7 +54,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>another-maven-project</finalName>
+		<finalName>Another-Maven-Project</finalName>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
 			<plugins>
@@ -57,11 +63,11 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.0.0-M3</version>
 				</plugin>
-				<plugin>
+				<!--<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
 					<version>3.8.2</version>
-				</plugin>
+				</plugin>  -->
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -117,6 +123,7 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+
 	<reporting>
 		<plugins>
 			<plugin>
